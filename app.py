@@ -4,7 +4,7 @@ from flask_restful import Resource, reqparse, Api
 import requests
 #import cStringIO
 #from io import BytesIO
-from PIL import Image
+#from PIL import Image
 
 #Instantiate a flask object 
 app = Flask(__name__)
@@ -30,8 +30,8 @@ class ResizeImage(Resource):
         imageUrl = imageIds[0]
         img_data = requests.get(imageUrl).content
 
-        image = Image.open(BytesIO(img_data))
-        resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
+        #image = Image.open(BytesIO(img_data))
+        #resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
         
         
         """
