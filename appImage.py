@@ -1,9 +1,9 @@
 #Import necessary packages
 from flask import Flask
 from flask_restful import Resource, reqparse, Api
-import base64
+#import base64
 import requests
-import cStringIO
+#import cStringIO
 from io import BytesIO
 from PIL import Image
 
@@ -33,6 +33,9 @@ class ResizeImage(Resource):
 
         image = Image.open(BytesIO(img_data))
         resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
+        
+        
+        """
 
 
 
@@ -51,8 +54,11 @@ class ResizeImage(Resource):
         res = requests.post(url, payload)
 
         uploadedImageJson = res.json()
+        
+        """
 
-        return uploadedImageJson
+        #return uploadedImageJson
+        return {'Title': 'testTitle', 'Director': 'testDirector', 'Genre': 'testGenre', 'Collection': 'testCollection'} 
 
 
 #Adding the URIs to the api
