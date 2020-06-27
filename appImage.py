@@ -12,7 +12,7 @@ app = Flask(__name__)
 #Instantiate Api object
 api = Api(app)
 
-app.app_context().push()
+#app.app_context().push()
 
 
 
