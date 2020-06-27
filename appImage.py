@@ -4,8 +4,8 @@ from flask_restful import Resource, reqparse, Api
 #import base64
 import requests
 #import cStringIO
-from io import BytesIO
-from PIL import Image
+#from io import BytesIO
+#from PIL import Image
 
 #Instantiate a flask object 
 app = Flask(__name__)
