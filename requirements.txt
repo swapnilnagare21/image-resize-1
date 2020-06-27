@@ -2,5 +2,4 @@ Flask
 Flask-RESTful
 Flask-SQLAlchemy
 requests
-Pillow
 uwsgi
