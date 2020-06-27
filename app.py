@@ -51,11 +51,7 @@ class ResizeImage(Resource):
         res = requests.post(url, payload)
 
         uploadedImageJson = res.json()
-        
-        
-
-        #return uploadedImageJson
-        return {"Title": "testTitle"} 
+        return uploadedImageJson
 
 
 #Adding the URIs to the api
