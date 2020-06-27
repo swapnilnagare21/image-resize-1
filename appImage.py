@@ -31,8 +31,8 @@ class ResizeImage(Resource):
         imageUrl = imageIds[0]
         img_data = requests.get(imageUrl).content
 
-        image = Image.open(BytesIO(img_data))
-        resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
+        #image = Image.open(BytesIO(img_data))
+        #resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
         
         
         """
