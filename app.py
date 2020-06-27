@@ -24,14 +24,12 @@ class ResizeImage(Resource):
         requiredHeight = 750;
         
         baseUrl = "https://image.tmdb.org/t/p/w500/"
-        
-
 
         #titleNames = ["The Dark Knight"]
         #imageIds = ["https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"]
 
 
-        imageUrl = baseUrl + str(posterPath)
+        imageUrl = baseUrl + str(posterPath) + ".jpg"
         img_data = requests.get(imageUrl).content
 
         image = Image.open(BytesIO(img_data))
@@ -41,8 +39,6 @@ class ResizeImage(Resource):
         buffered = cStringIO.StringIO()
         resizedImage.save(buffered, format="JPEG")
         #img_str = base64.b64encode(buffered.getvalue())
-
-
         
         url = "https://api.imgbb.com/1/upload"
 
@@ -58,7 +54,7 @@ class ResizeImage(Resource):
 
 
 #Adding the URIs to the api
-api.add_resource(ResizeImage, '/<string:movie>')
+api.add_resource(ResizeImage, '/<string:posterPath>')
 
 if __name__=='__main__':        
     #Run the applications
