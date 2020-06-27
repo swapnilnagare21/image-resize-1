@@ -57,7 +57,7 @@ class ResizeImage(Resource):
         """
 
         #return uploadedImageJson
-        return {'Title': 'testTitle', 'Director': 'testDirector', 'Genre': 'testGenre', 'Collection': 'testCollection'} 
+        return {"Title": "testTitle"} 
 
 
 #Adding the URIs to the api
