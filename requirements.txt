@@ -1,0 +1,8 @@
+Flask
+Flask-RESTful
+base64
+requests
+cStringIO
+BytesIO
+PIL
+uwsgi
