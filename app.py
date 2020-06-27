@@ -39,7 +39,7 @@ class ResizeImage(Resource):
         #img_str = base64.b64encode(buffered.getvalue())
 
 
-        """
+        
         url = "https://api.imgbb.com/1/upload"
 
         payload = {
@@ -51,7 +51,7 @@ class ResizeImage(Resource):
 
         uploadedImageJson = res.json()
         
-        """
+        
 
         #return uploadedImageJson
         return {"Title": "testTitle"} 
