@@ -1,7 +1,7 @@
 Flask
 Flask-RESTful
-base64
 requests
+base64
 cStringIO
 BytesIO
 PIL
