@@ -1,5 +1,5 @@
 Flask
 Flask-RESTful
 requests
-PIL
+Pillow
 uwsgi
