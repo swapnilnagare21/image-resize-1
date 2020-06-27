@@ -17,18 +17,21 @@ api = Api(app)
 
 
 class ResizeImage(Resource):
-    def get(self):        
+    def get(self, posterPath):        
         imgbbKey = '7560011cb554421936fd80696b850a18'
 
         requiredWidth = 500;
         requiredHeight = 750;
+        
+        baseUrl = "https://image.tmdb.org/t/p/w500/"
+        
 
 
-        titleNames = ["The Dark Knight"]
-        imageIds = ["https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"]
+        #titleNames = ["The Dark Knight"]
+        #imageIds = ["https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"]
 
 
-        imageUrl = imageIds[0]
+        imageUrl = baseUrl + str(posterPath)
         img_data = requests.get(imageUrl).content
 
         image = Image.open(BytesIO(img_data))
@@ -55,7 +58,7 @@ class ResizeImage(Resource):
 
 
 #Adding the URIs to the api
-api.add_resource(ResizeImage, '/')
+api.add_resource(ResizeImage, '/<string:movie>')
 
 if __name__=='__main__':        
     #Run the applications
