@@ -3,6 +3,7 @@ from flask import Flask
 from flask_restful import Resource, reqparse, Api
 import requests
 import cStringIO
+import base64
 from io import BytesIO
 from PIL import Image
 
