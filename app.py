@@ -1,7 +1,7 @@
 #Import necessary packages
 from flask import Flask
 from flask_restful import Resource, reqparse, Api
-#import requests
+import requests
 #import cStringIO
 #from io import BytesIO
 #from PIL import Image
@@ -27,8 +27,8 @@ class ResizeImage(Resource):
         imageIds = ["https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"]
 
 
-        #imageUrl = imageIds[0]
-        #img_data = requests.get(imageUrl).content
+        imageUrl = imageIds[0]
+        img_data = requests.get(imageUrl).content
 
         #image = Image.open(BytesIO(img_data))
         #resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
