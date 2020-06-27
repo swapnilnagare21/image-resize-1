@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_restful import Resource, reqparse, Api
 import requests
-#import cStringIO
+import cStringIO
 from io import BytesIO
 from PIL import Image
 
@@ -34,15 +34,12 @@ class ResizeImage(Resource):
         resizedImage = image.resize((requiredWidth,requiredHeight), Image.NEAREST)
         
         
-        """
-
-
-
         buffered = cStringIO.StringIO()
         resizedImage.save(buffered, format="JPEG")
         #img_str = base64.b64encode(buffered.getvalue())
 
 
+        """
         url = "https://api.imgbb.com/1/upload"
 
         payload = {
