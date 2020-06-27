@@ -1,8 +1,5 @@
 Flask
 Flask-RESTful
 requests
-cStringIO
-base64
-BytesIO
 PIL
 uwsgi
