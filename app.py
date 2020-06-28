@@ -24,6 +24,9 @@ class ResizeImage(Resource):
         requiredHeight = 750;
         
         baseUrl = "https://image.tmdb.org/t/p/w500/"
+        
+        if(len(posterPath) > 40):
+            baseUrl = "https://m.media-amazon.com/images/M/"
 
         #titleNames = ["The Dark Knight"]
         #imageIds = ["https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"]
